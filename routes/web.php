@@ -19,4 +19,9 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::get('/testhome', 'HomeController@testhome')->name('testhome');
-Route::get('/admin/categories', 'CategoriesController@index')->name('list-category');
+
+
+// ## Change ## use Route::resource instead because it's more simple
+// Route::get('/admin/categories', 'CategoriesController@index')->name('list_category');
+// Route::get('admin/categories/detail/{$id}', 'CategoriesController@detail')->name('detail_category');
+Route::resource('categories', 'CategoriesController');

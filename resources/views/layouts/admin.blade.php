@@ -179,7 +179,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="{{ route('home') }}" class="nav-link active">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
@@ -188,7 +188,7 @@
             
           </li>
           <li class="nav-item">
-            <a href="{{ route('list-category') }}" class="nav-link">
+            <a href="{{ route('categories.index') }}" class="nav-link">
               <i class="nav-icon fa fa-th"></i>
               <p>
                 Category
