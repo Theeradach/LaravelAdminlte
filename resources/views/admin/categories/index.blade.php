@@ -14,7 +14,7 @@
                     <a href="{{ route('home') }}">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('categories.index') }}">Categories</a>
+                    <a href="{{ route('admin.categories.index') }}">Categories</a>
                 </li>
               </ol>
             </div><!-- /.col -->
@@ -26,7 +26,7 @@
 <section class="content">
     <div class="container-fluid">
         <p>
-            <a href="#" class="btn btn-primary">Add New Category</a>
+            <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">Add New Category</a>
         </p>
         <table class="table table-bordered table-striped">
             <tr>
@@ -39,7 +39,7 @@
                     <td>{{ $cat->id }}</td>
                     <td>{{ $cat->title}}</td>
                     <td>
-                        <a href="#" class="btn btn-info" style="margin-right:10px">Edit</a>
+                        <a href="{{ route('admin.categories.edit', $cat->id)}}" class="btn btn-info" style="margin-right:10px">Edit</a>
                         <a href="#" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
